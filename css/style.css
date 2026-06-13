@@ -229,5 +229,64 @@ footer{
     .stats{
         gap:30px;
     }
+/* SEARCH BAR */
 
+.search-container{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+}
+
+.search-input{
+
+    width:500px;
+    max-width:90%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#111827;
+
+    color:white;
+
+    outline:none;
+
+    font-size:1rem;
+}
+
+.search-btn{
+
+    padding:16px 24px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#38bdf8;
+
+    color:black;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.search-btn:hover{
+
+    transform:translateY(-2px);
+}
 }
