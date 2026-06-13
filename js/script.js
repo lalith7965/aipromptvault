@@ -1,8 +1,4 @@
-// AI Prompt Vault
-
 console.log("AI Prompt Vault Loaded");
-
-// Card hover enhancement
 
 const cards = document.querySelectorAll(".card");
 
@@ -18,18 +14,20 @@ cards.forEach(card => {
 
 });
 
-// Button click feedback
+const searchButton = document.querySelector(".search-btn");
 
-const buttons = document.querySelectorAll(".btn");
+if(searchButton){
 
-buttons.forEach(button => {
+    searchButton.addEventListener("click", () => {
 
-    button.addEventListener("click", (event) => {
+        const searchInput =
+        document.querySelector(".search-input");
 
-        event.preventDefault();
+        const query =
+        searchInput.value;
 
-        alert("Feature coming soon!");
+        alert("Search feature coming soon: " + query);
 
     });
 
-});
+}
