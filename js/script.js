@@ -14,19 +14,50 @@ cards.forEach(card => {
 
 });
 
-const searchButton = document.querySelector(".search-btn");
+const searchButton =
+document.querySelector(".search-btn");
 
-if(searchButton){
+const searchInput =
+document.querySelector(".search-input");
+
+if (searchButton && searchInput) {
 
     searchButton.addEventListener("click", () => {
 
-        const searchInput =
-        document.querySelector(".search-input");
+        const searchTerm =
+        searchInput.value.toLowerCase();
 
-        const query =
-        searchInput.value;
+        const cards =
+        document.querySelectorAll(".card");
 
-        alert("Search feature coming soon: " + query);
+        let results = 0;
+
+        cards.forEach(card => {
+
+            const text =
+            card.innerText.toLowerCase();
+
+            if (text.includes(searchTerm)) {
+
+                card.style.display = "block";
+
+                results++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+        if (results === 0) {
+
+            alert(
+                "No matching tools or prompts found."
+            );
+
+        }
 
     });
 
